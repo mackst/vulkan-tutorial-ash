@@ -36,3 +36,7 @@ path = "src/04_logical_device.rs"
 [[bin]]
 name = "05_window_surface"
 path = "src/05_window_surface.rs"
+
+[[bin]]
+name = "06_swap_chain_creation"
+path = "src/06_swap_chain_creation.rs"
