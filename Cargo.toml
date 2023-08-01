@@ -1,0 +1,16 @@
+[package]
+name = "vulkan-tutorial-ash"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/mackst/vulkan-tutorial-ash"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ash = { version = "0.37.3", features = ["linked"] }
+winit = "0.28.6"
+
+
+[[bin]]
+name = "00_base_code"
+path = "src/00_base_code.rs"
