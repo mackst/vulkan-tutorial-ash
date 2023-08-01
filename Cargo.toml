@@ -44,3 +44,7 @@ path = "src/06_swap_chain_creation.rs"
 [[bin]]
 name = "07_image_views"
 path = "src/07_image_views.rs"
+
+[[bin]]
+name = "08_graphics_pipeline"
+path = "src/08_graphics_pipeline.rs"
