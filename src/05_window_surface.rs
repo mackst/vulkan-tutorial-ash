@@ -400,6 +400,7 @@ impl Drop for HelloTriangleApplication {
             self.instance.as_ref().unwrap().destroy_instance(None);
         };
 
+        self.surface_loader = None;
         self.vk_entry = None;
     }
 }
