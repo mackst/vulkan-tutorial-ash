@@ -8,9 +8,15 @@ repository = "https://github.com/mackst/vulkan-tutorial-ash"
 
 [dependencies]
 ash = { version = "0.37.3", features = ["linked"] }
+ash-window = "0.12.0"
+raw-window-handle = "0.5.2"
 winit = "0.28.6"
 
 
 [[bin]]
 name = "00_base_code"
 path = "src/00_base_code.rs"
+
+[[bin]]
+name = "01_instance_creation"
+path = "src/01_instance_creation.rs"
