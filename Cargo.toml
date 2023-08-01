@@ -48,3 +48,7 @@ path = "src/07_image_views.rs"
 [[bin]]
 name = "08_graphics_pipeline"
 path = "src/08_graphics_pipeline.rs"
+
+[[bin]]
+name = "09_shader_modules"
+path = "src/09_shader_modules.rs"
