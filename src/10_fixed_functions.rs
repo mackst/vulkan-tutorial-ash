@@ -805,12 +805,13 @@ impl Drop for HelloTriangleApplication {
                 .unwrap()
                 .destroy_pipeline_layout(self.pipeline_layout.unwrap(), None);
 
-            for image_view in &self.swap_chain_image_views {
+            self.swap_chain_image_views.iter().for_each(|&image_view| {
                 self.device
                     .as_ref()
                     .unwrap()
-                    .destroy_image_view(*image_view, None);
-            }
+                    .destroy_image_view(image_view, None);
+            });
+
             self.swapchain_loader
                 .as_ref()
                 .unwrap()
