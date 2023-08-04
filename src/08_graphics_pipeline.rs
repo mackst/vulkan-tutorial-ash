@@ -1,5 +1,6 @@
 use std::{
     borrow::Cow,
+    collections::HashSet,
     ffi::{c_char, CStr, CString},
 };
 
@@ -316,18 +317,20 @@ impl HelloTriangleApplication {
         let indices = self.find_queue_families(self.physical_device.unwrap());
 
         let queue_priority = [1.0];
-        let mut unique_queue_families = vec![
+
+        let unique_queue_families = HashSet::from([
             indices.graphics_family.unwrap(),
             indices.present_family.unwrap(),
-        ];
-        unique_queue_families.dedup();
-        let mut queue_create_infos = Vec::new();
-        for queue_family in unique_queue_families {
-            let queue_create_info = vk::DeviceQueueCreateInfo::builder()
-                .queue_family_index(queue_family)
-                .queue_priorities(&queue_priority);
-            queue_create_infos.push(queue_create_info.build());
-        }
+        ]);
+        let queue_create_infos = unique_queue_families
+            .iter()
+            .map(|&queue_family| {
+                vk::DeviceQueueCreateInfo::builder()
+                    .queue_family_index(queue_family)
+                    .queue_priorities(&queue_priority)
+                    .build()
+            })
+            .collect::<Vec<_>>();
 
         let device_features = vk::PhysicalDeviceFeatures::default();
         let create_info = vk::DeviceCreateInfo::builder()
