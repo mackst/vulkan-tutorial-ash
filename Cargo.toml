@@ -72,3 +72,7 @@ path = "src/13_framebuffers.rs"
 [[bin]]
 name = "14_command_buffers"
 path = "src/14_command_buffers.rs"
+
+[[bin]]
+name = "15_hello_triangle"
+path = "src/15_hello_triangle.rs"
