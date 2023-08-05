@@ -80,3 +80,7 @@ path = "src/15_hello_triangle.rs"
 [[bin]]
 name = "16_frames_in_flight"
 path = "src/16_frames_in_flight.rs"
+
+[[bin]]
+name = "17_swap_chain_recreation"
+path = "src/17_swap_chain_recreation.rs"
