@@ -281,8 +281,6 @@ impl HelloTriangleApplication {
         event_loop.run_return(|event, _, control_flow| {
             control_flow.set_poll();
 
-            control_flow.set_wait();
-
             match event {
                 Event::WindowEvent {
                     event: WindowEvent::CloseRequested,
