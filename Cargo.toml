@@ -12,6 +12,7 @@ ash-window = "0.12.0"
 cgmath = "0.18.0"
 image = "0.24.6"
 raw-window-handle = "0.5.2"
+tobj = "4.0.0"
 winit = "0.28.6"
 
 
@@ -126,3 +127,7 @@ path = "src/26_texture_mapping.rs"
 [[bin]]
 name = "27_depth_buffering"
 path = "src/27_depth_buffering.rs"
+
+[[bin]]
+name = "28_model_loading"
+path = "src/28_model_loading.rs"
