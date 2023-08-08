@@ -88,3 +88,7 @@ path = "src/17_swap_chain_recreation.rs"
 [[bin]]
 name = "18_vertex_input"
 path = "src/18_vertex_input.rs"
+
+[[bin]]
+name = "19_vertex_buffer"
+path = "src/19_vertex_buffer.rs"
