@@ -84,3 +84,7 @@ path = "src/16_frames_in_flight.rs"
 [[bin]]
 name = "17_swap_chain_recreation"
 path = "src/17_swap_chain_recreation.rs"
+
+[[bin]]
+name = "18_vertex_input"
+path = "src/18_vertex_input.rs"
