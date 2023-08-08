@@ -118,3 +118,7 @@ path = "src/24_texture_image.rs"
 [[bin]]
 name = "25_sampler"
 path = "src/25_sampler.rs"
+
+[[bin]]
+name = "26_texture_mapping"
+path = "src/26_texture_mapping.rs"
