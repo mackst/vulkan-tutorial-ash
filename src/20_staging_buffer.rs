@@ -1169,7 +1169,7 @@ impl HelloTriangleApplication {
                 self.swap_chain.unwrap(),
                 u64::MAX,
                 self.image_available_semaphores[self.current_frame],
-                self.in_flight_fences[self.current_frame],
+                vk::Fence::null(),
             );
 
             if im_result.err() == Some(vk::Result::ERROR_OUT_OF_DATE_KHR) {
