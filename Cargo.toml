@@ -11,6 +11,7 @@ ash = { version = "0.37.3", features = ["linked"] }
 ash-window = "0.12.0"
 cgmath = "0.18.0"
 image = "0.24.6"
+rand = "0.8.5"
 raw-window-handle = "0.5.2"
 tobj = "4.0.0"
 winit = "0.28.6"
@@ -139,3 +140,7 @@ path = "src/29_mipmapping.rs"
 [[bin]]
 name = "30_multisampling"
 path = "src/30_multisampling.rs"
+
+[[bin]]
+name = "31_compute_shader"
+path = "src/31_compute_shader.rs"
