@@ -9,6 +9,7 @@ repository = "https://github.com/mackst/vulkan-tutorial-ash"
 [dependencies]
 ash = { version = "0.37.3", features = ["linked"] }
 ash-window = "0.12.0"
+cgmath = "0.18.0"
 raw-window-handle = "0.5.2"
 winit = "0.28.6"
 
@@ -100,3 +101,7 @@ path = "src/20_staging_buffer.rs"
 [[bin]]
 name = "21_index_buffer"
 path = "src/21_index_buffer.rs"
+
+[[bin]]
+name = "22_descriptor_layout"
+path = "src/22_descriptor_layout.rs"
