@@ -92,3 +92,7 @@ path = "src/18_vertex_input.rs"
 [[bin]]
 name = "19_vertex_buffer"
 path = "src/19_vertex_buffer.rs"
+
+[[bin]]
+name = "20_staging_buffer"
+path = "src/20_staging_buffer.rs"
