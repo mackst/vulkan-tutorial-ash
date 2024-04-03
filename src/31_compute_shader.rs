@@ -1651,7 +1651,7 @@ impl ComputeShaderApplication {
             let swapchains = [self.swap_chain.unwrap()];
             let image_indices = [image_index];
             let present_info = vk::PresentInfoKHR::builder()
-                .wait_semaphores(&wait_semaphores)
+                .wait_semaphores(&signal_semaphores)
                 .swapchains(&swapchains)
                 .image_indices(&image_indices);
 

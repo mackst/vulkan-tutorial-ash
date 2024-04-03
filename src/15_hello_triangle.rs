@@ -21,7 +21,7 @@ use ash::{
         ext::DebugUtils,
         khr::{Surface, Swapchain},
     },
-    vk::{self, DebugUtilsMessengerEXT, SurfaceFormatKHR},
+    vk::{self, AccessFlags, DebugUtilsMessengerEXT, SurfaceFormatKHR},
     Device, Entry, Instance,
 };
 
@@ -538,6 +538,7 @@ impl HelloTriangleApplication {
             src_subpass: vk::SUBPASS_EXTERNAL,
             dst_subpass: 0,
             src_stage_mask: vk::PipelineStageFlags::COLOR_ATTACHMENT_OUTPUT,
+            src_access_mask: AccessFlags::empty(),
             dst_stage_mask: vk::PipelineStageFlags::COLOR_ATTACHMENT_OUTPUT,
             dst_access_mask: vk::AccessFlags::COLOR_ATTACHMENT_WRITE,
             ..Default::default()
@@ -886,7 +887,7 @@ impl HelloTriangleApplication {
             let swapchains = [self.swap_chain.unwrap()];
             let image_indices = [image_index];
             let present_info = vk::PresentInfoKHR::builder()
-                .wait_semaphores(&wait_semaphores)
+                .wait_semaphores(&signal_semaphores)
                 .swapchains(&swapchains)
                 .image_indices(&image_indices);
 
